@@ -108,4 +108,4 @@
 
 - 分类依据是各 skill 的 SKILL.md 原始 description，不是按目录名（原 `agent/`、`plugins/`、`system/`、`user/` 是来源划分，不是功能划分）。
 - 有调用关系的已在"适用"栏注明（如 natural-writing 是写作总控、review 调度子代理、google-drive 调度 Docs/Sheets/Slides）。
-- 本文档是目录与简介层，不改变任何 skill 文件本身；如需把新简介写回各 SKILL.md 的 description 字段，另行执行。
+- 各 skill 的 `SKILL.md` `description` 字段已与本目录中文简介同步（自 2026-09-28 起）；本文档继续作分类总览，不替代各 skill 正文。
