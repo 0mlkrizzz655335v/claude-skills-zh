@@ -10,10 +10,15 @@
 ## Quick start / 快速开始
 
 ```bash
-# 只装一个中文写作 skill
-cp -r skills/writing/natural-writing $CODEX_HOME/skills/
-# 全部安装
-cp -r skills/* $CODEX_HOME/skills/
+# 只装一个中文写作 skill（平铺到 Codex skills 目录）
+cp -R skills/writing/natural-writing "$CODEX_HOME/skills/"
+
+# 全部安装：skills/ 下是分类目录，需平铺每个 skill，不要直接 cp skills/*
+# Codex 期望 ~/.codex/skills/<name>/SKILL.md
+find skills -mindepth 2 -maxdepth 2 -type d -exec cp -R {} "$CODEX_HOME/skills/" \;
+
+# 或按分类选装（例如只要中文写作）
+cp -R skills/writing/* "$CODEX_HOME/skills/"
 ```
 
 完整 skill 目录与中文简介见 [docs/SKILLS_CATALOG.md](docs/SKILLS_CATALOG.md)。
@@ -54,9 +59,14 @@ skill-installer 会从本仓库的 `skills/` 路径拉取并装到 `$CODEX_HOME/
 
 ```bash
 # 单个 skill
-cp -r skills/writing/natural-writing $CODEX_HOME/skills/
-# 全部
-cp -r skills/* $CODEX_HOME/skills/
+cp -R skills/writing/natural-writing "$CODEX_HOME/skills/"
+
+# 全部安装（平铺；勿用 `cp -r skills/*`，那会把 writing/ 等分类目录原样拷进去）
+find skills -mindepth 2 -maxdepth 2 -type d -exec cp -R {} "$CODEX_HOME/skills/" \;
+
+# 按分类选装
+cp -R skills/writing/* "$CODEX_HOME/skills/"
+cp -R skills/docs-office/* "$CODEX_HOME/skills/"
 ```
 
 **方式三：写作包（只想要中文写作能力）**
