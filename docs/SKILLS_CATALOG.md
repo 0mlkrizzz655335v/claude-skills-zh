@@ -1,7 +1,7 @@
 # Skills 功能分类与简介（重写版）
 
 > 整理日期：2026-09-28
-> 范围：PC 端实际导出的 56 个 skills（`~/workspace/pc-skills/skills/`）
+> 范围：本仓库 `skills/` 下的 56 个 skills
 > 说明：简介全部重写为中文，"适用"栏标注调用时机；原英文 description 仅作功能依据，不直接沿用。
 
 ---
